@@ -118,6 +118,10 @@ vim.keymap.set('n', '<leader>Y', "'+Y")
 vim.keymap.set('n', '<leader>rp', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- NOTE: save to clipboard (separate from vim)
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- NOTE: 4 space indenting (separate from vim)
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
