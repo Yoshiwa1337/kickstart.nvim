@@ -117,6 +117,11 @@ vim.keymap.set('n', '<leader>Y', "'+Y")
 -- NOTE: save to clipboard (separate from vim)
 vim.keymap.set('n', '<leader>rp', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- NOTE: save to clipboard (separate from vim)
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 --
 --
 -- Set to true if you have a Nerd Font installed and selected in the terminal
@@ -256,7 +261,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- Detect tabstop and shiftwidth automatically
   'ThePrimeagen/vim-be-good',
   'mbbill/undotree',
   'BurntSushi/ripgrep',
