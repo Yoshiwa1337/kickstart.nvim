@@ -90,7 +90,7 @@ vim.o.shellcmdflag = '-command'
 vim.o.shellquote = ''
 vim.o.shellxquote = ''
 
---
+-- NOTE: change tab
 --
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -98,6 +98,27 @@ vim.o.shellxquote = ''
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- NOTE: move highlighted code
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- NOTE: cursor stays infront of pasted code?
+vim.keymap.set('n', 'J', 'mzJ`z')
+
+-- NOTE: cursors stays in the middle for half-page jumps
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+-- NOTE: save to clipboard (separate from vim)
+vim.keymap.set('n', '<leader>y', "'+y")
+vim.keymap.set('v', '<leader>y', "'+y")
+vim.keymap.set('n', '<leader>Y', "'+Y")
+
+-- NOTE: save to clipboard (separate from vim)
+vim.keymap.set('n', '<leader>rp', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+--
+--
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
@@ -238,6 +259,8 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'ThePrimeagen/vim-be-good',
   'mbbill/undotree',
+  'BurntSushi/ripgrep',
+  'tpope/vim-fugitive',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
