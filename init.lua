@@ -114,10 +114,10 @@ vim.keymap.set('n', '<leader>y', "'+y")
 vim.keymap.set('v', '<leader>y', "'+y")
 vim.keymap.set('n', '<leader>Y', "'+Y")
 
--- NOTE: save to clipboard (separate from vim)
+-- NOTE: replace common lines of code
 vim.keymap.set('n', '<leader>rp', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- NOTE: save to clipboard (separate from vim)
+-- NOTE: keeps page centered when searching for terms
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
