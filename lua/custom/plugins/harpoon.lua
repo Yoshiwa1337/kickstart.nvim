@@ -21,10 +21,10 @@ return {
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end, { desc = 'open harpoon menu' })
 
-    vim.keymap.set('n', '<C-h>', function()
+    vim.keymap.set('n', '<C-t>', function()
       harpoon:list():select(1)
     end, { desc = 'fileslot1' })
-    vim.keymap.set('n', '<C-t>', function()
+    vim.keymap.set('n', '<C-h>', function()
       harpoon:list():select(2)
     end, { desc = 'fileslot2' })
     vim.keymap.set('n', '<C-n>', function()
