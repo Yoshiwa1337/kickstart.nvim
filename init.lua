@@ -128,6 +128,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 vim.opt.smartindent = false
+
+vim.o.background = 'light'
 --
 --
 -- Set to true if you have a Nerd Font installed and selected in the terminal
