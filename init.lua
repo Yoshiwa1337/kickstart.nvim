@@ -276,6 +276,7 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'captbaritone/better-indent-support-for-php-with-html',
   'nvim-treesitter/nvim-treesitter-context',
+  'ray-x/web-tools.nvim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
