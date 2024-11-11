@@ -290,7 +290,6 @@ require('lazy').setup({
   --
   --  This is equivalent to:
   --    require('Comment').setup({})
-
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
@@ -687,6 +686,9 @@ require('lazy').setup({
             require('lspconfig')[server_name].setup(server)
           end,
         },
+      }
+      require('mason-lspconfig').setup {
+        ensure_installed = { 'html', 'texlab', 'intelephense', 'cssls', 'biome', 'pyright' },
       }
     end,
   },
